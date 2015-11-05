@@ -1,0 +1,10 @@
+2015-11-05 18:05:47 Error: Fatal Error (1): Call to a member function success() on null in [C:\Users\951516\Downloads\xampp\htdocs\ProyectoIngenieria_1\soft\eccimovies\app\Controller\PostsController.php, line 52]
+2015-11-05 18:05:47 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /ProyectoIngenieria_1/soft/eccimovies/posts/add
+Stack Trace:
+#0 C:\Users\951516\Downloads\xampp\htdocs\ProyectoIngenieria_1\soft\eccimovies\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\Users\\951516...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\Users\\951516...', 52, Array)
+#2 C:\Users\951516\Downloads\xampp\htdocs\ProyectoIngenieria_1\soft\eccimovies\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\Users\\951516...', 52, Array)
+#3 C:\Users\951516\Downloads\xampp\htdocs\ProyectoIngenieria_1\soft\eccimovies\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
