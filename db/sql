@@ -1,0 +1,45 @@
+-- http://marnienickelson.com/2014/10/11/dynamic-dropdowns-with-cakephp-2-x/
+
+CREATE TABLE `categories` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(60) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+ 
+INSERT INTO `categories` (`id`, `name`)
+VALUES
+	(1,'books'),
+	(2,'music'),
+	(3,'electronics');
+ 
+CREATE TABLE `posts` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(50) DEFAULT NULL,
+  `subcategory_id` INT(10) UNSIGNED DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+ 
+INSERT INTO `posts` (`id`, `title`, `subcategory_id`)
+VALUES
+	(1,'The title',1),
+	(2,'A title once again',4),
+	(3,'Title strikes back',7);
+ 
+CREATE TABLE `subcategories` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `category_id` INT(10) UNSIGNED DEFAULT NULL,
+  `name` VARCHAR(60) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+ 
+INSERT INTO `subcategories` (`id`, `category_id`, `name`)
+VALUES
+	(1,1,'fiction'),
+	(2,1,'biography'),
+	(3,1,'children'),
+	(4,2,'classical'),
+	(5,2,'rock'),
+	(6,2,'jazz'),
+	(7,3,'camera'),
+	(8,3,'audio'),
+	(9,3,'tv');
